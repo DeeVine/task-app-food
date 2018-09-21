@@ -1,0 +1,8 @@
+{
+  "name": "task-app-food",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "mysql": "^2.16.0"
+  }
+}

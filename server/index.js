@@ -15,21 +15,25 @@ app.listen(3001, () => console.log('Example app listening on port 3001!'))
 connection.connect()
 
 app.get('/sql', (req, res) => {
-
-
   const myQuery = "SELECT App_id, SUM(impressions), SUM(clicks) FROM Application_statistics \
                   WHERE Date between '2018-01-01' and '2018-01-05' \
                   GROUP BY App_id";
 
+  //TODO: return promise to be used
+
+  const queryData = () => {}
+  // let queryData;
+
   connection.query(myQuery, function (err, data, fields) {
     if (err) throw err
-
+    // queryData = data;
+    // console.log('querydata inside', queryData);
     console.log('The data is: ', data)
   })
 
-  
+  // console.log('query data is' + queryData);
+  res.send('query data is in terminal')
 
-  res.send('check terminal for console.log sql query')
 });
 
 /*
