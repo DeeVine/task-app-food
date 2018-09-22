@@ -1,12 +1,16 @@
 const express = require('express')
 const app = express()
 var mysql = require('mysql')
+
+
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : '',
   database : 'ironsource'
 });
+
+//TODO:move routes to folder --> express startup generator template http://expressjs.com/en/starter/generator.html
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
@@ -29,10 +33,12 @@ app.get('/sql', (req, res) => {
     // queryData = data;
     // console.log('querydata inside', queryData);
     console.log('The data is: ', data)
+    res.send(data);
+    // return data;
   })
 
   // console.log('query data is' + queryData);
-  res.send('query data is in terminal')
+  // res.send('query data is in terminal')
 
 });
 

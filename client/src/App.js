@@ -14,8 +14,9 @@ class MyButton extends React.Component {
   render() {
 
     const testAlert = () => {
+      console.log('testing console');
       alert('testing');
-      axios.get('/').then(function(response) {
+      axios.get('http://localhost:3001/sql').then(function(response) {
         console.log('the response', response.data)
       });
     }
