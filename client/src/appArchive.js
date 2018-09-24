@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
-import TaskComponent from './components/TaskComponent/TaskComponent';
 
 class MyButton extends React.Component {
   constructor(props) {
@@ -40,7 +39,6 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <div>
-          <TaskComponent/>
           <MyButton/>
           <p>
             <button>Here's my stuff</button>
